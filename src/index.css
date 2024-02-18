@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-red-transparent {
+  background-color: rgba(
+    216,
+    90,
+    191,
+    0.5
+  ); /* Example RGBA color for a transparent red */
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.animated-gradient {
+  background: linear-gradient(270deg, #cdcbcb, #5a5959, #6a6a69, #3a3a3a);
+  background-size: 800% 800%;
+  animation: gradientBG 8s ease infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.animate-pulse {
+  background: linear-gradient(to right, #f0f0f0 8%, #e0e0e0 18%, #f0f0f0 33%);
+  background-size: 2000px 100%;
+  animation: shimmer 1.5s infinite linear;
+}
